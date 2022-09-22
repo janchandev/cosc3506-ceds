@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserAccountSettingsController">
+   <children>
+     <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1287.0">
+         <fill>
+            <LinearGradient endX="0.7502645583379837" endY="1.0">
+               <stops>
+                  <Stop color="#ff2c2c" />
+                  <Stop color="#7386d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button layoutX="31.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C.E.M.S." textFill="WHITE">
+         <font>
+            <Font name="Garamond Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyClubs" style="-fx-background-color: transparent;" text="My Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinClubs" style="-fx-background-color: transparent;" text="Join Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyEvents" style="-fx-background-color: transparent;" text="My Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="661.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinEvents" style="-fx-background-color: transparent;" text="Join Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="25.0" mnemonicParsing="false" onAction="#showVbox" style="-fx-background-color: transparent;" text="My Account" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Text fill="#ff2c2c" layoutX="302.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings">
+         <font>
+            <Font name="Cambria" size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userAccountName" layoutX="363.0" layoutY="230.0" prefHeight="37.0" prefWidth="294.0" text="John Doe" />
+      <Label layoutX="257.0" layoutY="238.0" text="Full Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userAccountStudentId" layoutX="363.0" layoutY="284.0" prefHeight="37.0" prefWidth="294.0" text="1234" />
+      <Label layoutX="260.0" layoutY="290.0" text="Student ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="400.0" text="Password:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userAccountEmail" layoutX="363.0" layoutY="340.0" prefHeight="37.0" prefWidth="294.0" text="johndoe@gmail.com" />
+      <Label layoutX="230.0" layoutY="344.0" text="Contact E-mail:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="530.0" layoutY="501.0" mnemonicParsing="false" onAction="#updateAccount" prefHeight="58.0" prefWidth="124.0" style="-fx-background-color: #E97070;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="userAccountPassword" layoutX="364.0" layoutY="395.0" prefHeight="37.0" prefWidth="293.0" text="password" />
+      <VBox fx:id="vboxNav" layoutX="1064.0" layoutY="74.0" prefHeight="64.0" prefWidth="168.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToAccountSettings" style="-fx-background-color: #E97070;" text="Account Settings" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToManageNotifications" style="-fx-background-color: #E97070;" text="Manage Notifications" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #E97070;" text="Sign Out" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Text fx:id="updateMessage" fill="#ff2c2c" layoutX="511.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserAccountSettingsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1287.0">
+         <fill>
+            <LinearGradient endX="0.7502645583379837" endY="1.0">
+               <stops>
+                  <Stop color="#ff2c2c" />
+                  <Stop color="#7386d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button layoutX="31.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C.E.M.S." textFill="WHITE">
+         <font>
+            <Font name="Garamond Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyClubs" style="-fx-background-color: transparent;" text="My Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinClubs" style="-fx-background-color: transparent;" text="Join Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyEvents" style="-fx-background-color: transparent;" text="My Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="661.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinEvents" style="-fx-background-color: transparent;" text="Join Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="25.0" mnemonicParsing="false" onAction="#showVbox" style="-fx-background-color: transparent;" text="My Account" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Text fill="#ff2c2c" layoutX="302.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Notifications">
+         <font>
+            <Font name="Cambria" size="32.0" />
+         </font>
+      </Text>
+      <Button layoutX="575.0" layoutY="501.0" mnemonicParsing="false" onAction="#updateAccount" prefHeight="58.0" prefWidth="124.0" style="-fx-background-color: #E97070;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <VBox layoutX="308.0" layoutY="181.0" prefHeight="274.0" prefWidth="277.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <CheckBox mnemonicParsing="false" selected="true" text="Coding Enthusiasts" />
+         </children>
+      </VBox>
+      <Text fx:id="updateMessage" fill="#ff2c2c" layoutX="554.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <VBox fx:id="vboxNav" layoutX="1064.0" layoutY="74.0" prefHeight="64.0" prefWidth="168.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToAccountSettings" style="-fx-background-color: #E97070;" text="Account Settings" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToManageNotifications" style="-fx-background-color: #E97070;" text="Manage Notifications" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #E97070;" text="Sign Out" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

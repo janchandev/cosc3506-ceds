@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserEventsViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1287.0">
+         <fill>
+            <LinearGradient endX="0.7502645583379837" endY="1.0">
+               <stops>
+                  <Stop color="#ff2c2c" />
+                  <Stop color="#7386d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button layoutX="31.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C.E.M.S." textFill="WHITE">
+         <font>
+            <Font name="Garamond Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyClubs" style="-fx-background-color: transparent;" text="My Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinClubs" style="-fx-background-color: transparent;" text="Join Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyEvents" style="-fx-background-color: transparent;" text="My Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="661.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinEvents" style="-fx-background-color: transparent;" text="Join Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="25.0" mnemonicParsing="false" onAction="#showVbox" style="-fx-background-color: transparent;" text="My Account" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Text fill="#ff2c2c" layoutX="252.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Your  Events">
+         <font>
+            <Font name="Cambria" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="257.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar dui eget lectus rutrum, eu mattis nibh consectetur. Ut ultrices nec urna eget blandit." wrappingWidth="731.8055419921875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="userEventsTable" layoutX="179.0" layoutY="297.0" prefHeight="363.0" prefWidth="980.0" style="-fx-border-color: #E97070;">
+        <columns>
+          <TableColumn fx:id="userEventName" prefWidth="151.8148193359375" style="-fx-background-color: #E97070;" text="Event Name" />
+          <TableColumn fx:id="userEventClub" prefWidth="152.81478881835938" style="-fx-background-color: #E97070;" text="Club Name" />
+            <TableColumn fx:id="userEventDescription" prefWidth="224.40740966796875" style="-fx-background-color: #E97070;" text="Description" />
+            <TableColumn fx:id="userEventDate" prefWidth="285.59259033203125" style="-fx-background-color: #E97070;" text="Date and Time" />
+            <TableColumn fx:id="userEventId" prefWidth="166.4815673828125" style="-fx-background-color: #E97070;" text="Event ID" />
+        </columns>
+      </TableView>
+      <TextField layoutX="828.0" layoutY="252.0" prefHeight="25.0" prefWidth="239.0" promptText="search..." />
+      <Button layoutX="1087.0" layoutY="251.0" mnemonicParsing="false" style="-fx-background-color: #E97070;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <VBox fx:id="vboxNav" layoutX="1064.0" layoutY="74.0" prefHeight="64.0" prefWidth="168.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToAccountSettings" style="-fx-background-color: #E97070;" text="Account Settings" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToManageNotifications" style="-fx-background-color: #E97070;" text="Manage Notifications" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #E97070;" text="Sign Out" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Button layoutX="266.0" layoutY="251.0" mnemonicParsing="false" onAction="#leaveEvent" style="-fx-background-color: #E97070;" text="Leave Event" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>   
+   </children>
+</AnchorPane>

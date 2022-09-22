@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserPaymentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1287.0">
+         <fill>
+            <LinearGradient endX="0.7502645583379837" endY="1.0">
+               <stops>
+                  <Stop color="#ff2c2c" />
+                  <Stop color="#7386d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button layoutX="31.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C.E.M.S." textFill="WHITE">
+         <font>
+            <Font name="Garamond Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyClubs" style="-fx-background-color: transparent;" text="My Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinClubs" style="-fx-background-color: transparent;" text="Join Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyEvents" style="-fx-background-color: transparent;" text="My Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="661.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinEvents" style="-fx-background-color: transparent;" text="Join Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="25.0" mnemonicParsing="false" onAction="#showVbox" style="-fx-background-color: transparent;" text="My Account" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Text fill="#ff2c2c" layoutX="252.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Payment">
+         <font>
+            <Font name="Cambria" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="257.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar dui eget lectus rutrum, eu mattis nibh consectetur. Ut ultrices nec urna eget blandit." wrappingWidth="731.8055419921875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="paymentNameCard" layoutX="324.0" layoutY="266.0" prefHeight="37.0" prefWidth="294.0" />
+      <Label layoutX="668.0" layoutY="271.0" text="Club Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="paymentCardNumber" layoutX="324.0" layoutY="326.0" prefHeight="37.0" prefWidth="294.0" />
+      <Label layoutX="197.0" layoutY="271.0" text="Name on Card:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="paymentCardExpiry" layoutX="324.0" layoutY="380.0" prefHeight="37.0" prefWidth="294.0" />
+      <Label layoutX="201.0" layoutY="331.0" text="Card Number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="paymentCvv" layoutX="324.0" layoutY="436.0" prefHeight="37.0" prefWidth="93.0" />
+      <Label layoutX="270.0" layoutY="441.0" text="CVV:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="385.0" text="Expiry:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="661.0" layoutY="337.0" prefHeight="90.0" prefWidth="420.0" text="A club for all coding enthusiasts from beginner to advanced! &#10;Come learn and meet other coding enthusiasts!" />
+      <Label layoutX="668.0" layoutY="307.0" text="Club Description:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="paymentSubmitButton" layoutX="575.0" layoutY="565.0" mnemonicParsing="false" onAction="#goToConfirmationScreen" prefHeight="58.0" prefWidth="177.0" style="-fx-background-color: #e97070;" text="Submit Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="769.0" layoutY="272.0" text="Coding Enthusiasts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="442.0" text="Annual Membership Fee:" textFill="#e97070">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="442.0" text="\$125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vboxNav" layoutX="1064.0" layoutY="74.0" prefHeight="64.0" prefWidth="168.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToAccountSettings" style="-fx-background-color: #E97070;" text="Account Settings" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToManageNotifications" style="-fx-background-color: #E97070;" text="Manage Notifications" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #E97070;" text="Sign Out" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

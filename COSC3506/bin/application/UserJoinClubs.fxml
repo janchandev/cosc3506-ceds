@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserJoinClubsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1287.0">
+         <fill>
+            <LinearGradient endX="0.7502645583379837" endY="1.0">
+               <stops>
+                  <Stop color="#ff2c2c" />
+                  <Stop color="#7386d5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button layoutX="31.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C.E.M.S." textFill="WHITE">
+         <font>
+            <Font name="Garamond Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyClubs" style="-fx-background-color: transparent;" text="My Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinClubs" style="-fx-background-color: transparent;" text="Join Clubs" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMyEvents" style="-fx-background-color: transparent;" text="My Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="661.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToJoinEvents" style="-fx-background-color: transparent;" text="Join Events" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="25.0" mnemonicParsing="false" onAction="#showVbox" style="-fx-background-color: transparent;" text="My Account" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="joinClubMenu" layoutX="461.0" layoutY="219.0" prefHeight="25.0" prefWidth="370.0" />
+      <Text fill="#ff2c2c" layoutX="252.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Join clubs!">
+         <font>
+            <Font name="Cambria" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="257.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar dui eget lectus rutrum, eu mattis nibh consectetur. Ut ultrices nec urna eget blandit." wrappingWidth="731.8055419921875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="joinClubDescription" editable="false" layoutX="296.0" layoutY="301.0" prefHeight="88.0" prefWidth="735.0" text=" " wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextArea>
+      <Text fx:id="joinClubName" fill="#ff2c2c" layoutX="580.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#ff2c2c" layoutX="282.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information:">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="576.0" layoutY="586.0" mnemonicParsing="false" onAction="#joinClub" prefHeight="77.0" prefWidth="154.0" style="-fx-background-color: #E97070;" text="Join Club!" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="joinClubEmail" editable="false" layoutX="256.0" layoutY="462.0" prefHeight="77.0" prefWidth="327.0" text=" ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextArea>
+      <Text fill="#ff2c2c" layoutX="717.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership fee:">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="936.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="joinClubPrice" layoutX="950.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <VBox fx:id="vboxNav" layoutX="1064.0" layoutY="74.0" prefHeight="64.0" prefWidth="168.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToAccountSettings" style="-fx-background-color: #E97070;" text="Account Settings" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToManageNotifications" style="-fx-background-color: #E97070;" text="Manage Notifications" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #E97070;" text="Sign Out" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
